@@ -6,7 +6,6 @@ export const eventHandler = (client) => {
         const event = import(`../events/${file}`)
         event.then((event) => {
             const configObj = event.default;
-            console.log(configObj);
             if(configObj.once) {
                 client.once(configObj.name, (...args) => configObj.execute(client, ...args));
             } else {
