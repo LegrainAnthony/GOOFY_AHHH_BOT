@@ -1,0 +1,13 @@
+{
+  "name": "goofy__ahhh__bot",
+  "version": "1.0.0",
+  "description": "A description of your bot",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^13.15.1"
+  }
+}
