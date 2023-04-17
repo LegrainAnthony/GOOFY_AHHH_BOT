@@ -1,8 +1,9 @@
 export default {
     name: 'help',
-    execute(client, message) {
-        const str = client.commands
-        console.log(str);
-  
+    execute(message, client, args) {
+        console.log('aaa');
+        for (let command in client.commands){
+            console.log(command);
+        }
     }
 }

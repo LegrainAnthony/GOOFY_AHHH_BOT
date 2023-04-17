@@ -12,7 +12,7 @@ export default {
         if(!command) return;
 
         try {
-            command.execute(message, args);
+            command.execute(message, client, args);
         } catch (error) {
             console.error(error);
             message.reply('Il y a eu une erreur lors de l\'exécution de cette commande.')
