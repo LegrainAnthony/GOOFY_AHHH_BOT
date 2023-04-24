@@ -6,8 +6,8 @@ export default {
     execute(message, client, args) {
         let str = '';
         args.forEach(champ => {
-            console.log(champ);
-            str +=` les dégats de ${champ} sont ${championsDmg[champ]} \n` 
+            let modifiedArgs = champ.charAt(0).toUpperCase() + champ.slice(1).toLowerCase();
+            str +=` les dégats de ${modifiedArgs} sont ${championsDmg[modifiedArgs]} \n` 
         });
         message.reply(str)
     },
