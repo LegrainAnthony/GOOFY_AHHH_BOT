@@ -1,4 +1,5 @@
 import { getFromUrl } from '../../utils/axiosHelper.js'
+import getAllNamesChamps from '../../utils/helpers/lol/allChamp.js'
 
 export default {
     name: 'lore',
