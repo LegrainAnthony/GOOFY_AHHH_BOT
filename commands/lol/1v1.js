@@ -1,14 +1,11 @@
-import championsDatas from '../../data/rawData/champions.json' assert {type: 'json'}
+import getAllNamesChamps from '../../utils/helpers/lol/allChamp.js'
 
 export default {
     name: '1v1',
     help: false,
     execute(message) {
-      const nameChamps = []; 
-      for (const champ in championsDatas.data) {
-       nameChamps.push(champ);
-       console.log(champ);
-      }
+      const nameChamps = getAllNamesChamps();
+      
       let firstRandomValue = Math.floor(Math.random() * nameChamps.length);
       let firstChamp = nameChamps[firstRandomValue];
 
