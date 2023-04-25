@@ -5,8 +5,8 @@ import Discord from 'discord.js'
 
 export default {
     name: 'lore',
-    help: false,
-    description: 'a',
+    help: true,
+    description: 'Cette commande donne l\'histoire du personnage ainsi que son splash art.',
     async execute(message, client, args) {
         const allNamesChamps = getAllNamesChamps();
 
