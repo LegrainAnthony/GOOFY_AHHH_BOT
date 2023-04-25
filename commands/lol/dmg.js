@@ -1,4 +1,5 @@
 import championsDmg from '../../data/rawData/dmgType.json' assert {type: 'json'}
+import formatedArgument from '../../utils/helpers/lol/name_formatter.js';
 
 export default {
     name: 'dmg',
@@ -6,7 +7,8 @@ export default {
     execute(message, client, args) {
         let str = '';
         args.forEach(champ => {
-            let modifiedArgs = champ.charAt(0).toUpperCase() + champ.slice(1).toLowerCase();
+            let modifiedArgs = formatedArgument(champ)
+            console.log(modifiedArgs);
             str +=` les dégats de ${modifiedArgs} sont ${championsDmg[modifiedArgs]} \n` 
         });
         message.reply(str)

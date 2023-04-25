@@ -1,4 +1,5 @@
 import championsDatas from '../../data/rawData/champions.json' assert {type: 'json'}
+import formatedArgument from '../../utils/helpers/lol/name_formatter.js';
 
 export default {
     name: '1v1',
@@ -15,8 +16,8 @@ export default {
       let secondChamp;
       let messageReply = '';
 
-      const filteredArgs = args.filter((arg) => arg === "Mage" || arg === "Support" || arg === "Tank" || arg === "Assassin" || arg === "Marksman" || arg === "Fighter" );
-      const namesArgs =  args.filter((arg) => arg !== "Mage" && arg !== "Support" && arg !== "Tank" && arg !== "Assassin" && arg !== "Marksman" && arg !== "Fighter" );
+      const filteredArgs = args.filter((arg) => formatedArgument(arg) === "Mage" || formatedArgument(arg) === "Support" || formatedArgument(arg) === "Tank" || formatedArgument(arg) === "Assassin" || formatedArgument(arg) === "Marksman" || formatedArgument(arg) === "Fighter" );
+      const namesArgs =  args.filter((arg) => formatedArgument(arg) !== "Mage" && formatedArgument(arg) !== "Support" && formatedArgument(arg) !== "Tank" && formatedArgument(arg) !== "Assassin" && formatedArgument(arg) !== "Marksman" && formatedArgument(arg) !== "Fighter" );
 
       function ramdomArray (array) {
         return Math.floor(Math.random() * array.length)
