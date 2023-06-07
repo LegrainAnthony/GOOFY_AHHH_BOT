@@ -6,7 +6,7 @@ import * as dotenv from 'dotenv'
 
 dotenv.config()
 
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGES] });
 
 eventHandler(client);
 commandHandler(client);
