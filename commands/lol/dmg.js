@@ -5,6 +5,7 @@ export default {
     name: 'dmg',
     help: false,
     execute(message, client, args) {
+        console.log(args);
         let str = '';
         args.forEach(champ => {
             let modifiedArgs = formatedArgument(champ)
