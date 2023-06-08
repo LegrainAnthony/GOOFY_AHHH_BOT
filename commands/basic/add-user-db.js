@@ -11,7 +11,7 @@ export default {
     let guild = message.guild;
 
     guild.members
-    .fetch(args[0]) // Replace with your user's ID
+    .fetch(args[0])
     .then((member) => {
     
         const query = `INSERT INTO users (name, id_discord) VALUES (?, ?)`;
